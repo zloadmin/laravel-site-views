@@ -1,0 +1,12 @@
+{
+    "name": "zloadmin/site-views",
+    "description": "Laravel package for site views statistic",
+    "authors": [
+        {
+            "name": "Vladimir Karpovich",
+            "email": "dev.karpovich@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
