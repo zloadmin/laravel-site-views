@@ -1,6 +1,6 @@
 <?php
 
-namespace SiteViews\Modeles;
+namespace SiteViews\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use \Illuminate\Http\Request;
