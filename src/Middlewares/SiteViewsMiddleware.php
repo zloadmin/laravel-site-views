@@ -3,6 +3,7 @@
 namespace SiteViews\Middlewares;
 
 use Closure;
+use SiteViews\Modeles\SiteView;
 
 class SiteViewsMiddleware
 {
