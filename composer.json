@@ -7,5 +7,12 @@
             "email": "dev.karpovich@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "zloadmin\\site-views\\SiteViewsServiceProvider"
+            ]
+        }
+    }
 }
