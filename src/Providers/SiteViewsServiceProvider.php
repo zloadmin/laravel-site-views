@@ -1,10 +1,11 @@
 <?php
 
-namespace Providers\Modeles;
+namespace SiteViews\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
-use Zloadmin\SiteViews\SiteViewsMiddleware;
+use SiteViews\Middlewares\SiteViewsMiddleware;
+
 
 class SiteViewsServiceProvider extends ServiceProvider
 {
