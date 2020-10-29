@@ -1,6 +1,6 @@
 <?php
 
-namespace Zloadmin\SiteViews;
+namespace SiteViews\Middlewares;
 
 use Closure;
 

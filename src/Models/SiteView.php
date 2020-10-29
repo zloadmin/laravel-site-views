@@ -1,6 +1,6 @@
 <?php
 
-namespace Zloadmin\SiteViews;
+namespace SiteViews\Modeles;
 
 use Illuminate\Database\Eloquent\Model;
 use \Illuminate\Http\Request;

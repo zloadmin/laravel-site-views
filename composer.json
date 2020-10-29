@@ -7,11 +7,16 @@
             "email": "dev.karpovich@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "SiteViews\\": "src/"
+        }
+    },
     "require": {},
     "extra": {
         "laravel": {
             "providers": [
-                "Zloadmin\\SiteViews\\SiteViewsServiceProvider"
+                "SiteViews\\Providers\\SiteViewsServiceProvider"
             ]
         }
     }
