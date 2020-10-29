@@ -25,10 +25,7 @@ class SiteViewsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
-
         $router = $this->app->make(Router::class);
         $router->aliasMiddleware('site-views', SiteViewsMiddleware::class);
-
     }
 }
