@@ -7,6 +7,7 @@ use \Illuminate\Http\Request;
 use App\Client;
 class SiteView extends Model
 {
+    protected $table = 'sqr_site_views';
     protected $fillable = [
         'client_id',
         'session_id',
