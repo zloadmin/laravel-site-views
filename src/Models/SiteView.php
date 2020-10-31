@@ -21,10 +21,11 @@ class SiteView extends Model
      */
     static function add(Request $request)
     {
-        if ($client_id = self::getClientId()) {
+        $session = $request->getSession();
+        if ($client_id = self::getClientId() ) {
             self::create([
                 'client_id' => $client_id,
-                'session_id' => $request->getSession()->getId() ?? '',
+                'session_id' => $session ? $session->getId() : '',
                 'url' => $request->url(),
                 'domain' => $request->getHost(),
                 'ip' => $request->ip(),
