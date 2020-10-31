@@ -13,9 +13,17 @@ class CreateSiteViewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('site_views', function (Blueprint $table) {
+        Schema::create('sqr_site_views', function (Blueprint $table) {
             $table->increments('id');
+            $table->bigInteger('client_id')->unsigned();
+            $table->string('session_id');
+            $table->string('url');
+            $table->string('domain');
+            $table->string('ip');
+            $table->string('agent');
             $table->timestamps();
+            $table->index('client_id');
+            $table->index('session_id');
         });
     }
 
@@ -26,6 +34,6 @@ class CreateSiteViewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_views');
+        Schema::dropIfExists('sqr_site_views');
     }
 }
