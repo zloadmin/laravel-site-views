@@ -33,7 +33,7 @@ class SiteView extends Model
         }
     }
 
-    static function getClientId() : string
+    static function getClientId() : int
     {
         return Client::getSiteViewId();
     }

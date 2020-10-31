@@ -2,7 +2,7 @@
 `composer require zloadmin/site-views:dev-main`
 ### Add method getSiteViewId to App\Client class
 ```php
-static function getSiteViewId() : string
+static function getSiteViewId() : int
 {
 
 }
