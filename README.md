@@ -15,3 +15,12 @@ Route::midleware('site-views')->get('/', function () {
     
 });
 ```
+## If you use api routes add to /app/Http/Kernel.php middlewares AddQueuedCookiesToResponse and StartSession
+```php
+    'api' => [
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            'throttle:60,1',
+            'bindings',
+        ],
+``` 
