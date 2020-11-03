@@ -5,7 +5,6 @@ namespace SiteViews\Models;
 use Illuminate\Database\Eloquent\Model;
 use \Illuminate\Http\Request;
 use App\Client;
-
 class SiteView extends Model
 {
     protected $table = 'sqr_site_views';
@@ -23,11 +22,11 @@ class SiteView extends Model
      */
     static function add(Request $request)
     {
-
-        if ($client_id = self::getClientId()) {
+        $session = $request->getSession();
+        if ($client_id = self::getClientId() ) {
             self::create([
                 'client_id' => $client_id,
-                'session_id' => session_id(),
+                'session_id' => $session ? $session->getId() : '',
                 'url' => $request->url(),
                 'domain' => $request->getHost(),
                 'ip' => $request->ip(),
@@ -36,7 +35,7 @@ class SiteView extends Model
         }
     }
 
-    static function getClientId(): int
+    static function getClientId() : int
     {
         return Client::getSiteViewId();
     }
