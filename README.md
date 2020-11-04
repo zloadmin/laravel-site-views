@@ -15,12 +15,4 @@ Route::midleware('site-views')->get('/', function () {
     
 });
 ```
-## Add start session in index.php
-```php
-    'api' => [
-            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-            \Illuminate\Session\Middleware\StartSession::class,
-            'throttle:60,1',
-            'bindings',
-        ],
-``` 
+
