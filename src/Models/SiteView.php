@@ -26,7 +26,7 @@ class SiteView extends Model
         if ($client_id = self::getClientId() ) {
             self::create([
                 'client_id' => $client_id,
-                'session_id' => $session ? $session->getId() : '',
+                'session_id' => md5($request->userAgent() . $request->ip()), // TODO: Make with session
                 'url' => $request->url(),
                 'domain' => $request->getHost(),
                 'ip' => $request->ip(),
