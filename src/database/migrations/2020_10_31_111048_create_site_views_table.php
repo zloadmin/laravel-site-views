@@ -20,7 +20,7 @@ class CreateSiteViewsTable extends Migration
             $table->string('url');
             $table->string('domain');
             $table->string('ip');
-            $table->string('agent');
+            $table->text('agent');
             $table->timestamps();
             $table->index('client_id');
             $table->index('session_id');
